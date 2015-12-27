@@ -7,7 +7,11 @@ white=#fff
 
 body
   font-family 'Montserrat', sans-serif
-  background-color blue
+  background #0a2345 /* Old browsers */
+  background -moz-linear-gradient(top,  #0a2345 0%, #020104 100%)/* FF3.6-15 */
+  background -webkit-linear-gradient(top,  #0a2345 0%,#020104 100%) /* Chrome10-25,Safari5.1-6 */
+  background linear-gradient(to bottom,  #0a2345 0%,#020104 100%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
 
 .flex-container
   display flex
@@ -32,6 +36,8 @@ body
 
 .headphones
   padding-top 100px
+  img
+    margin-left -2.5rem
   .headphones-content
     padding-left 30px
     p
@@ -141,9 +147,11 @@ ul
 
 p.text-author:before
   content url("../img/wasik.png")
+  display inline-block
+  width 38px
+  height 38px
 
 .discover
-  background #02050A none repeat scroll 0% 0%
   padding-top 100px
   h3
     font-size 36px
@@ -172,6 +180,26 @@ footer
   height 300px
   visibility hidden
 
+
+.carousel-indicators
+  li
+    background-color transparent
+    border 2px solid #213a61
+    width 12px
+    height 12px
+    margin 0
+
+.carousel-indicators
+  .active
+    background-color #335a95
+    border none
+
+.animate-top
+  transition-duration 0.3s
+  transition-property transform
+  &:hover
+    -webkit-transform translateY(-50px)
+    transform translateY(-50px)
 
 /*
 @media screen and (max-width: 991px) {
@@ -205,23 +233,76 @@ footer
 
 @media (min-width: 768px) {
   .container {
-    width: 750px;
+    width 750px
   }
 }
 @media (min-width: 992px) {
   .container {
-    width: 970px;
+    width 970px
   }
 }
 @media (min-width: 1200px) {
   .container {
-    width: 1170px;
+    width 1170px
   }
 }
 
-@media (max-width: 991px) {
-  img.grow, .discover img {width: 100%; max-width 300px;}
+@media (max-width: 1200px) {
+img.grow, .discover img {
+  width 100%
+  max-width 300px
+  margin-bottom 35px
+}
 
+.iphone-center:after {
+    display none
+  }
+
+.iphone-center img {
+  max-width 250px
+}
+}
+@media (max-width: 991px) {
+
+  footer .flex-container {
+
+    flex-wrap wrap
+  }
+
+
+  footer li, footer p, footer ul  {
+
+    flex-basis 100%!important
+    text-align center !important
+  }
+
+  .slider .back-carousel .text-carousel {
+    font-size 12px
+  }
+
+  p.text-author:before {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+
+  .iphone-center:after{
+    display none
+  }
+
+
+  .headphones .headphones-content, .power, .features, .btn {
+    text-align center
+  }
+
+  .iphone-center {
+
+    margin-bottom 40px
+  }
+
+  .discover img {
+      max-width none
+  }
 }
 
 @media (min-width: 768px) {
