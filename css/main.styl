@@ -12,22 +12,35 @@ body
 .flex-container
   display flex
 
+.jumbotron,.headphones-content,.features
+  background transparent
+  h2
+    color white
+    font-size 48px
+    span
+      color light-blue
+  p
+    color #2e66b2
+    font-size 18px
+    line-height 70px
+    padding-bottom 75px
+
 .welcome
   padding 200px 0px 0px
   .navbar
     padding-top 25px
-  .jumbotron
-    background transparent
-    h2
-      color white
-      font-size 48px
-      span
-        color light-blue
+
+.headphones
+  padding-top 100px
+  .headphones-content
+    padding-left 30px
     p
-      color #2e66b2
-      font-size 18px
-      line-height 70px
-      padding-bottom 75px
+      color #66778e
+      line-height 36px
+      font-size 14px
+    .btn-lg
+      padding 15px 50px
+
 
 .btn
   padding 15px 30px
@@ -45,6 +58,7 @@ body
 
 .navbar-default .navbar-toggle
   border-color transparent
+  padding-top 35px
 
 .navbar-default .navbar-toggle .icon-bar
   background-color light-blue
@@ -60,6 +74,105 @@ body
 
 .music-app
   background transparent url("../img/music-app.png") no-repeat scroll 0% 0%
+
+.grow
+  transition all .4s ease-in-out
+  &:hover
+    transform scale(1.1)
+
+ul
+  list-style none
+  padding-left 0
+
+.features
+  .features-list
+    h3
+      font-size 24px
+      color white
+    p
+      color #66778e
+      line-height 36px
+      font-size 14px
+    .icon
+      width 54px
+      height 54px
+    .icon-speaker
+      content url("../img/speaker.png")
+    .icon-activity
+      content url("../img/activity.png")
+    .icon-headphones
+      content url("../img/headphones.png")
+    .icon-cd
+      content url("../img/cd.png")
+  h2
+    padding 150px 0
+
+.power
+  background transparent url("../img/power-back.png")  no-repeat 100% 100%/contain
+  padding 100px 0
+  margin 70px 0
+  .icon-power
+    content url("../img/power.png")
+  h3
+  font-size 24px
+  color white
+  p
+    color #66778e
+    line-height 36px
+    font-size 14px
+
+.slider
+  background rgba(6, 20, 37, 0.5)
+  .back-carousel
+    padding 100px 0px
+
+    background: url("../img/slider-back.png")
+    .text-carousel
+      color #66778e
+      font-size 24px
+    .text-author
+      padding-top 30px
+      color #66778e
+      font-size 14px
+    span
+      color #213a61
+    .carousel-caption
+      bottom 50px
+
+p.text-author:before
+  content url("../img/wasik.png")
+
+.discover
+  background #02050A none repeat scroll 0% 0%
+  padding-top 100px
+  h3
+    font-size 36px
+    color white
+    padding-bottom 30px
+  p
+    color #66778e
+    font-size 14px
+    padding-bottom 115px
+    line-height 36px
+  .btn
+    margin 80px 0 150px
+
+footer
+  background #02050A none repeat scroll 0% 0%
+  .flex-container
+    border-top 1px solid #393A3C
+    padding 50px 0 95px
+  li
+    padding-right 15px
+    font-size 14px
+  a,p
+    color #14396a
+
+.carousel-inner>.item>a>img, .carousel-inner>.item>img
+  height 300px
+  visibility hidden
+
+
 /*
 @media screen and (max-width: 991px) {
   .flex-container{
@@ -106,9 +219,10 @@ body
   }
 }
 
+@media (max-width: 991px) {
+  img.grow, .discover img {width: 100%; max-width 300px;}
 
-
-
+}
 
 @media (min-width: 768px) {
 
@@ -134,3 +248,16 @@ body
 
 }
 
+.iphone-center
+  position relative
+  img
+    position relative
+    z-index 6
+  &:after
+    position absolute
+    bottom -85px
+    left -50%
+    width 798px
+    height 126px
+    content url(../img/layer.png)
+    z-index 5

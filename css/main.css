@@ -5,27 +5,49 @@ body {
 .flex-container {
   display: flex;
 }
+.jumbotron,
+.headphones-content,
+.features {
+  background: transparent;
+}
+.jumbotron h2,
+.headphones-content h2,
+.features h2 {
+  color: #fff;
+  font-size: 48px;
+}
+.jumbotron h2 span,
+.headphones-content h2 span,
+.features h2 span {
+  color: #285a9e;
+}
+.jumbotron p,
+.headphones-content p,
+.features p {
+  color: #2e66b2;
+  font-size: 18px;
+  line-height: 70px;
+  padding-bottom: 75px;
+}
 .welcome {
   padding: 200px 0px 0px;
 }
 .welcome .navbar {
   padding-top: 25px;
 }
-.welcome .jumbotron {
-  background: transparent;
+.headphones {
+  padding-top: 100px;
 }
-.welcome .jumbotron h2 {
-  color: #fff;
-  font-size: 48px;
+.headphones .headphones-content {
+  padding-left: 30px;
 }
-.welcome .jumbotron h2 span {
-  color: #285a9e;
+.headphones .headphones-content p {
+  color: #66778e;
+  line-height: 36px;
+  font-size: 14px;
 }
-.welcome .jumbotron p {
-  color: #2e66b2;
-  font-size: 18px;
-  line-height: 70px;
-  padding-bottom: 75px;
+.headphones .headphones-content .btn-lg {
+  padding: 15px 50px;
 }
 .btn {
   padding: 15px 30px;
@@ -45,6 +67,7 @@ body {
 }
 .navbar-default .navbar-toggle {
   border-color: transparent;
+  padding-top: 35px;
 }
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #285a9e;
@@ -62,6 +85,123 @@ body {
 }
 .music-app {
   background: transparent url("../img/music-app.png") no-repeat scroll 0% 0%;
+}
+.grow {
+  transition: all 0.4s ease-in-out;
+}
+.grow:hover {
+  transform: scale(1.1);
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+.features .features-list h3 {
+  font-size: 24px;
+  color: #fff;
+}
+.features .features-list p {
+  color: #66778e;
+  line-height: 36px;
+  font-size: 14px;
+}
+.features .features-list .icon {
+  width: 54px;
+  height: 54px;
+}
+.features .features-list .icon-speaker {
+  content: url("../img/speaker.png");
+}
+.features .features-list .icon-activity {
+  content: url("../img/activity.png");
+}
+.features .features-list .icon-headphones {
+  content: url("../img/headphones.png");
+}
+.features .features-list .icon-cd {
+  content: url("../img/cd.png");
+}
+.features h2 {
+  padding: 150px 0;
+}
+.power {
+  background: transparent url("../img/power-back.png") no-repeat 100% 100%/contain;
+  padding: 100px 0;
+  margin: 70px 0;
+h3
+  font-size: 24px;
+  color: #fff;
+}
+.power .icon-power {
+  content: url("../img/power.png");
+}
+.power p {
+  color: #66778e;
+  line-height: 36px;
+  font-size: 14px;
+}
+.slider {
+  background: rgba(6,20,37,0.5);
+}
+.slider .back-carousel {
+  padding: 100px 0px;
+  background: url("../img/slider-back.png");
+}
+.slider .back-carousel .text-carousel {
+  color: #66778e;
+  font-size: 24px;
+}
+.slider .back-carousel .text-author {
+  padding-top: 30px;
+  color: #66778e;
+  font-size: 14px;
+}
+.slider .back-carousel span {
+  color: #213a61;
+}
+.slider .back-carousel .carousel-caption {
+  bottom: 50px;
+}
+p.text-author:before {
+  content: url("../img/wasik.png");
+}
+.discover {
+  background: #02050a none repeat scroll 0% 0%;
+  padding-top: 100px;
+}
+.discover h3 {
+  font-size: 36px;
+  color: #fff;
+  padding-bottom: 30px;
+}
+.discover p {
+  color: #66778e;
+  font-size: 14px;
+  padding-bottom: 115px;
+  line-height: 36px;
+}
+.discover .btn {
+  margin: 80px 0 150px;
+}
+footer {
+  background: #02050a none repeat scroll 0% 0%;
+}
+footer .flex-container {
+  border-top: 1px solid #393a3c;
+  padding: 50px 0 95px;
+}
+footer li {
+  padding-right: 15px;
+  font-size: 14px;
+}
+footer a,
+footer p {
+  color: #14396a;
+}
+.carousel-inner>.item>a>img,
+.carousel-inner>.item>img {
+  height: 300px;
+  visibility: hidden;
 }
 /*
 @media screen and (max-width: 991px) {
@@ -107,6 +247,13 @@ body {
     width: 1170px;
   }
 }
+@media (max-width: 991px) {
+  img.grow,
+  .discover img {
+    width: 100%;
+    max-width: 300px;
+  }
+}
 @media (min-width: 768px) {
   .navbar-collapse.collapse {
     display: none !important;
@@ -124,4 +271,20 @@ body {
   .navbar-nav>li {
     float: none;
   }
+}
+.iphone-center {
+  position: relative;
+}
+.iphone-center img {
+  position: relative;
+  z-index: 6;
+}
+.iphone-center:after {
+  position: absolute;
+  bottom: -85px;
+  left: -50%;
+  width: 798px;
+  height: 126px;
+  content: url("../img/layer.png");
+  z-index: 5;
 }
